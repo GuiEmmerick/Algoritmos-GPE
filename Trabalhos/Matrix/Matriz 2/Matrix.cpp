@@ -77,7 +77,7 @@ Matrix Matrix::operator+(Matrix &mat){
 
     Matrix aux (l,c);
 
-    if(linha != this->linha || coluna != this->coluna){
+    if(l != this->linha || c != this->coluna){
         throw invalid_argument("Matrizes de dimensoes diferentes");
     }
     else{
@@ -98,7 +98,7 @@ Matrix Matrix::operator-(Matrix &mat){
 
     Matrix aux (l,c);
 
-    if(linha != this->linha || coluna != this->coluna){
+    if(l != this->linha || c != this->coluna){
         throw invalid_argument("Matrizes de dimensoes diferentes");
     }
     else{
@@ -152,7 +152,7 @@ void Matrix::allocate(int linha, int coluna){
       for(unsigned i=0;i<linha;i++){
         matrix[i]=new int[coluna];
       }
-      cout<<"Alocado"<<endl;
+     
 
     }
 
@@ -161,7 +161,7 @@ void Matrix::deallocate(){
         delete[] matrix[i];
       }
       delete[] matrix;
-      cout<<"Desalocado com sucesso!"<<endl;
+   
     }
 int Matrix::getLinha(){
     return linha;
@@ -170,25 +170,6 @@ int Matrix::getColuna(){
     return coluna;
 }
 
-    void preencherMatriz(Matrix &mat){
-        int l = mat.getLinha();
-        int c = mat.getColuna();
-        for(int i=0; i < l; i++){
-            for(int j=0; j < c; j++){
-                mat[i][j] =1;
-            }
-        }
-    }
 
 
-    void printarMatriz(Matrix &mat){
-        int l = mat.getLinha();
-        int c = mat.getColuna();
-        for(int i=0; i < l; i++){
-            for(int j=0; j < c; j++){
-                cout<<mat[i][j] << " ";
-            }
-            cout<<endl;
-        }
-    }
-
+ 
