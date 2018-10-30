@@ -9,8 +9,8 @@ podendo ocasionar falhas em outros programas ou falhas sistémicas.
 
 
 Sua declaração é formato * nome_da_variável e possui o uso de dois operadores:
-1. *conteúdo do endereço apontado pelo ponteiro
-1. **&** endereço de memória
+1. *conteúdo do endereço apontado pelo ponteiro.
+1. **&** endereço de memória.
 
 Uma das aplicações mais específicas dos ponteiros é seu uso para criar estruturas encadeadas.
 
