@@ -6,7 +6,7 @@ class Matrix{
 protected:
     void allocate(int linha, int coluna);
     void deallocate();
-    void preencher_zero();
+    
 
 
 public:
@@ -20,7 +20,7 @@ public:
     Matrix operator*(Matrix &matrix);
 
 
-
+    void preencher_zero();
     int getLinha();
     int getColuna();
 

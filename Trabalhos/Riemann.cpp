@@ -12,7 +12,6 @@ double linear(double x, vector<double> parametros){
     return parametros[0]*x + parametros[1];
 }
 
-
 double Riemann(double (*func)(double, vector<double>), vector<double> parametros, double intervalo_a, double intervalo_b, int qtd_retangulos){
     double area=0;
     double incremento = fabs(intervalo_b-intervalo_a)/qtd_retangulos;
@@ -32,7 +31,6 @@ double Riemann(double (*func)(double, vector<double>), vector<double> parametros
         return area;
     }
 
-
 }
 
 void digitaParametros(vector<double> &vec, double &intervalo_a, double &intervalo_b, int &retangulos ){
@@ -51,14 +49,13 @@ void digitaParametros(vector<double> &vec, double &intervalo_a, double &interval
     }
 
     cout<<"Entre com os intervalos desejados"<<endl;
-    cin>>intervalo_b;;
+    cin>>intervalo_b;
     cin>>intervalo_a;
 
     cout<<"Entre com a quantidade de retangulos"<<endl;
-    cin>>retangulos;;
-
-
+    cin>>retangulos;
 }
+
 int main()
 {
     setlocale(LC_ALL, "Portuguese"); //acentuação em português

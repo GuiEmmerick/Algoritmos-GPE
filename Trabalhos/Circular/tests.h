@@ -3,17 +3,15 @@ TEST(List, is_empty){
 	ASSERT_TRUE(list.IsEmpty());
 }
 
-
 TEST(List, empty_list){
 	List list;
 	ASSERT_THROW(list.GetValue(), std::invalid_argument);
 }
 
-
 TEST(List, GetValue){
 	List list;
 	list.AddNodeNext(2);
-	
+
 	ASSERT_EQ(list.GetValue(), 2);
 }
 
@@ -23,11 +21,10 @@ TEST(List, AddNodePrevious){
 	list.AddNodePrevious(2);
 	list.AddNodePrevious(3);
 	list.AddNodePrevious(4);
-	
+
 	ASSERT_EQ(list.GetValue(), 1);
 
 }
-
 
 TEST(List, GetValueNext){
 	List list;
@@ -44,11 +41,9 @@ TEST(List, GetValuePrevious){
 	ASSERT_EQ(list.GetValuePrevious(),8);
 }
 
-
-
 TEST(list, ApagaPositionNextErro){
 	List list;
-	
+
 	ASSERT_THROW(list.ApagaPositionPositionNext(), std::invalid_argument);
 }
 
@@ -57,26 +52,24 @@ TEST(list, ApagaPositionNext){
 	list.AddNodeNext(2);
 	list.AddNodeNext(6);
 	list.AddNodeNext(8);
-	list.ApagaPositionPositionNext();	
+	list.ApagaPositionPositionNext();
 	ASSERT_EQ(list.GetValue(), 8);
 }
 
 TEST(list, ApagaPositionPreviousErro){
 	List list;
-	
+
 	ASSERT_THROW(list.ApagaPositionPositionPrevious(), std::invalid_argument);
 }
-
 
 TEST(list, ApagaPositionPrevious){
 	List list;
 	list.AddNodeNext(2);
 	list.AddNodeNext(6);
 	list.AddNodeNext(8);
-	list.ApagaPositionPositionPrevious();	
+	list.ApagaPositionPositionPrevious();
 	ASSERT_EQ(list.GetValue(), 6);
 }
-
 
 TEST(List, ApontaNextNodeErro){
 	List list;
@@ -92,7 +85,6 @@ TEST(List, ApontaNextNode){
 	ASSERT_EQ(list.GetValue(), 6);
 }
 
-
 TEST(List, ApontaPreviousNode){
 	List list;
 	list.AddNodePrevious(2);
@@ -102,16 +94,11 @@ TEST(List, ApontaPreviousNode){
 	ASSERT_EQ(list.GetValue(), 8);
 }
 
-
 TEST(List, ApontaPreviusNodeErro){
 	List list;
 
 	ASSERT_THROW(list.ApontaPreviousNode(), std::invalid_argument);
 }
-
-
-
-
 
 TEST(List, BuscaValor){
 	List list;

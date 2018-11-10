@@ -26,18 +26,16 @@ List::List(){
 List::~List(){
 	while(!IsEmpty()){
 		ApagaPositionPositionNext();
-	}	
-		
+	}
 }
 
 bool List::IsEmpty(){
 	if(position==NULL){
-		return true;	
+		return true;
 	}
 	else{
 		return false;
 	}
-
 }
 
 void List::AddNodeNext(int i){
@@ -45,16 +43,14 @@ void List::AddNodeNext(int i){
 		position = new Node(i);
 		position->next = position;
 		position->previous = position;
-		
-		
+
 	}
 	else{
 		Node *aux = new Node(i,position->next,position);
 		position->next->previous = aux;
 		position->next =aux;
-		
-	}
 
+	}
 }
 
 void List::AddNodePrevious(int i){
@@ -62,17 +58,14 @@ void List::AddNodePrevious(int i){
 		position = new Node(i);
 		position->next = position;
 		position->previous = position;
-				
-		
+
 	}
 	else{
 		Node *aux = new Node(i, position, position->previous);
-		position->previous->next =aux;		
+		position->previous->next =aux;
 		position->previous = aux;
-		
-			
-	}
 
+	}
 }
 
 int List::GetValue(){
@@ -82,7 +75,6 @@ int List::GetValue(){
 	else{
 		return position->info;
 	}
-
 }
 
 int List::GetValueNext(){
@@ -92,7 +84,6 @@ int List::GetValueNext(){
 	else{
 		return position->next->info;
 	}
-
 }
 
 int List::GetValuePrevious(){
@@ -102,13 +93,12 @@ int List::GetValuePrevious(){
 	else{
 		return position->previous->info;
 	}
-
 }
+
 void List::ApagaPositionPositionNext(){ //apaga position e aponta para o próximo
 	if (IsEmpty()){
 		throw invalid_argument("Lista vazia");
-	}	
-	
+	}
 	else if(position==position->next){
 		position = NULL;
 	}
@@ -119,19 +109,16 @@ void List::ApagaPositionPositionNext(){ //apaga position e aponta para o próxim
 		position->next->previous = position->previous;
 		position = aux->next;
 		delete aux;
-		
 	}
 }
 
 void List::ApagaPositionPositionPrevious(){ //apaga position e aponta para o anterior
 	if (IsEmpty()){
 		throw invalid_argument("Lista vazia");
-	}	
-	
+	}
 	else if(position==position->next){
 		position = NULL;
 	}
-	
 	else{
 		Node *aux;
 		aux = position;
@@ -139,45 +126,39 @@ void List::ApagaPositionPositionPrevious(){ //apaga position e aponta para o ant
 		position->next->previous = position->previous;
 		position = aux->previous;
 		delete aux;
-		
 	}
 }
 
 void List::ApontaNextNode(){ //faz position mudar para a proxima posição
-	
+
 	if (IsEmpty()){
 		throw invalid_argument("lista vazia");
 	}
-
 	Node *aux;
 	aux = position;
 	position->next->previous = aux;
 	position->previous->next = aux;
 	position = position->next;
-	
 
 }
 
 void List::ApontaPreviousNode(){ //faz position mudar para a posição anterior
 	if(IsEmpty()){
-		throw invalid_argument("lista vazia");	
+		throw invalid_argument("lista vazia");
 	}
-
 	Node *aux;
 	aux = position;
 	position->next->previous = aux;
 	position->previous->next = aux;
 	position = position->previous;
-	
 
 }
 
 bool List::BuscaValor(int i){
 	Node *aux = position;
-	
 	if (aux->info == i){
 		return true;
-	}else{			
+	}else{
 		aux = aux->next;
 		while(aux != position){
 			if (aux->info == i){
@@ -187,6 +168,5 @@ bool List::BuscaValor(int i){
 		}
    	}
 	return false;
-
 }
 #endif

@@ -3,9 +3,7 @@ class Node{
 		Node(int inf, Node* next=NULL, Node* previous=NULL);
 		int info;
 		Node* next;
-		Node* previous;	
-		
-
+        Node* previous;
 };
 
 Node::Node(int inf, Node* n, Node* p){
@@ -13,4 +11,3 @@ Node::Node(int inf, Node* n, Node* p){
 	next = n;
 	previous = p;
 }
-
