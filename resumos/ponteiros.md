@@ -12,6 +12,7 @@ Sua declaração é formato * nome_da_variável e possui o uso de dois operadores:
 1. *conteúdo do endereço apontado pelo ponteiro.
 1. **&** endereço de memória.
 
+```
 #include <stdio.h>
 void main()
 {
@@ -27,10 +28,12 @@ void main()
   printf("Valor de ptr: %p, Conteúdo de ptr: %d\n", ptr, *ptr);
   printf("B: %d, C: %d"), b, c);
 } 
+```
 
-*Alocaçao de memória*
+## Alocaçao de memória*
 Durante a execução de um programa, pode-se alocar dinamicamente memória para usar como variáveis do programa. abaixo temos um exemplo de alocação de um vetor
 
+```
 #include <iostream>
 using namespace std;
 
@@ -54,9 +57,12 @@ void main()
   delete[] v;
 } 
 
-Uma das aplicações mais específicas dos ponteiros é seu uso para criar *estruturas encadeadas*.
+```
+
+Uma das aplicações mais específicas dos ponteiros é seu uso para criar **estruturas encadeadas**.
 Abaixo temos um exemplo de como adicionar um nó no início de uma lista
 
+```
 // (...)
 
 TPESSOA *inicio, *ptr;
@@ -101,19 +107,14 @@ listas[0] = new TNODO;
 listas[0]->prox = NULL;
 aux = listas[0];
 aux->prox = NULL;
+```
 
-
-*Ponteiros para funções*
+##Ponteiros para funções
 
 O uso de ponteiros para funções em C serve principalmente para definir, em tempo de execução, qual função será executada, sem a necessidade de escrever o nome da função, de forma explícita naquele ponto do código. 
 Em geral, a definição de qual função será executada é feita em um outro ponto do código, fazendo o ponteiro apontar para a função desejada.
 
-// ***************************************************
-// Programação de Baixo Nível
-//	Ponteiros para funções 
-//
-// ***************************************************
-
+```
 #include <stdio.h>
 
 // ***************************************************
@@ -186,7 +187,7 @@ int main()
 	} while(opcao !=3);
 }
 
-
+```
 
 [Referência 1](http://www.di.ufpb.br/liliane/aulas/ponteiros.html)
 [Referência 2](https://www.inf.pucrs.br/~pinho/PRGSWB/Ponteiros/ponteiros.html)
