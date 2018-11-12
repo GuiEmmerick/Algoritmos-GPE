@@ -30,7 +30,7 @@ void main()
 } 
 ```
 
-## Alocaçao de memória*
+## Alocaçao de memória
 Durante a execução de um programa, pode-se alocar dinamicamente memória para usar como variáveis do programa. abaixo temos um exemplo de alocação de um vetor
 
 ```
@@ -109,7 +109,7 @@ aux = listas[0];
 aux->prox = NULL;
 ```
 
-##Ponteiros para funções
+## Ponteiros para funções
 
 O uso de ponteiros para funções em C serve principalmente para definir, em tempo de execução, qual função será executada, sem a necessidade de escrever o nome da função, de forma explícita naquele ponto do código. 
 Em geral, a definição de qual função será executada é feita em um outro ponto do código, fazendo o ponteiro apontar para a função desejada.
