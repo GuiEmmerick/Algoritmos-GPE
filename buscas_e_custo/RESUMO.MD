@@ -75,12 +75,13 @@ Termos de menor grau podem ser desprezados: n^2 + n será aproximado para n^2 e 
 
 Após fitar uma reta do gráfico acima no gnuplot, obtemos um algoritmo de custo f1(n) = 0,68n +0,28 , que pode ser aproximado para O(n).
 
-![Gráfico busca binária]([https://j6zwcg.by.files.1drv.com/y4mn2Dc_xsRlakfY647RMptC25HmoVa3aVSo_suj5MJFYwl-_R9JGij6zi4qJWxL0KWVYRDJjDSjhTISHsnTlMEJcGxU68OcQhgeCp0qV9ZW6h-YX8SfNuzwNEn3cEtL1hx7SfWH0nZVAB2frsbz9xYY8K-AwizTB8gGeN8tSJCEYa3Fimn1PIiiJVgPC9HsifbUk9XTGgps5Kdm914z_2vMQ?width=1476&height=1017&cropmode=none](https://j6zwcg.by.files.1drv.com/y4mn2Dc_xsRlakfY647RMptC25HmoVa3aVSo_suj5MJFYwl-_R9JGij6zi4qJWxL0KWVYRDJjDSjhTISHsnTlMEJcGxU68OcQhgeCp0qV9ZW6h-YX8SfNuzwNEn3cEtL1hx7SfWH0nZVAB2frsbz9xYY8K-AwizTB8gGeN8tSJCEYa3Fimn1PIiiJVgPC9HsifbUk9XTGgps5Kdm914z_2vMQ?width=1476&height=1017&cropmode=none))
+![Gráfico busca binária](https://j6zwcg.by.files.1drv.com/y4mn2Dc_xsRlakfY647RMptC25HmoVa3aVSo_suj5MJFYwl-_R9JGij6zi4qJWxL0KWVYRDJjDSjhTISHsnTlMEJcGxU68OcQhgeCp0qV9ZW6h-YX8SfNuzwNEn3cEtL1hx7SfWH0nZVAB2frsbz9xYY8K-AwizTB8gGeN8tSJCEYa3Fimn1PIiiJVgPC9HsifbUk9XTGgps5Kdm914z_2vMQ?width=1476&height=1017&cropmode=none)
 
-  
-  
+
 
 Após fitar uma reta do gráfico acima no gnuplot, obtemos um algoritmo de custo f2(n) = 1,48 log(0,280n) + 0,532, que pode ser aproximado para O(log n).
+  
+ 
 
   
   
